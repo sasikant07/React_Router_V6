@@ -1,8 +1,13 @@
-import React from 'react'
+import React from 'react';
+import { useNavigate } from 'react-router';
 
 const Home = () => {
+    const navigate = useNavigate();
   return (
-    <div>Home Page</div>
+    <>
+        <div>Home Page</div>
+        <button onClick={() => navigate('order-summary', {replace: true})}>Place Order</button>
+    </>
   )
 }
 
